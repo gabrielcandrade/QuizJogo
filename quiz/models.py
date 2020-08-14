@@ -2,13 +2,13 @@ from django.db import models
 
 # Create your models here.
 class Quiz(models.Model):
-    ANSWERS_CHOICES =( 
+    ANSWERS_CHOICES = ( 
         ("A", "A"), 
         ("B", "B"), 
         ("C", "C"), 
         ("D", "D"), 
         ("E", "E"), 
-    ) 
+    )
 
     pergunta = models.TextField("Pergunta", max_length=500)
     alternativa1 = models.CharField("Alternativa A", max_length=200)

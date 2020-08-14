@@ -3,4 +3,6 @@ from .models import Quiz
 
 # Create your views here.
 def home(request):
-    return render(request, 'quiz/index.html')
+    data = {}
+    data['quizes'] = Quiz.objects.all()
+    return render(request, 'quiz/index.html', data)
